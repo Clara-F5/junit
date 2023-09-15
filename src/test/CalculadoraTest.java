@@ -1,5 +1,9 @@
+package test;
+
 import org.junit.Test;
 import org.junit.Assert;
+import service.Calculadora;
+
 public class CalculadoraTest {
 
     @Test
