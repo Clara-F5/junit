@@ -14,13 +14,13 @@ public class BonusServiceTest {
     @Test
     public void bonusDeveSerZeroParaFuncionariosComSalarioAlto(){
         BonusService service = new BonusService();
-//        assertThrows(IllegalArgumentException.class,()-> service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(),new BigDecimal("12000"))));
-        try {
-            service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(),new BigDecimal("12000")));
-            fail("Não deu a exception!");
-        }catch (Exception e){
-                assertEquals("Esse funcionário não pode receber bônus devido ao seu salário",e.getMessage() );
-        }
+        assertThrows(IllegalArgumentException.class,()-> service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(),new BigDecimal("12000"))));
+//        try {
+//            service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(),new BigDecimal("12000")));
+//            fail("Não deu a exception!");
+//        }catch (Exception e){
+//                assertEquals("Esse funcionário não pode receber bônus devido ao seu salário",e.getMessage() );
+//        }
     }
     @Test
     public void bonusDeveSerDezPorcentoDoSalario(){
